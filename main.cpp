@@ -9,6 +9,7 @@ int main()
 
     bool onTitleScreen = true;
 
+    //User can only continue if they enter 'x' or 'X' as input. Transits to the main menu after.
     while (onTitleScreen == true)
     {
 

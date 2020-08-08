@@ -1,21 +1,36 @@
 #include <iostream>
 
-// defines uint as unsigned int for an easier time
-using uint = unsigned int;
+#include "menu.h"
 
-/*
-basically a street life game, get rich, sell drugs, that kind of thing.
-player needs to earn respect for certain things, maybe get different missions when they get certain respect
-money for buying stuff, trading, meds -> inventory system
+using uint = unsigned int; 
 
-IDEA: drugs that change every text into another format that makes shit look whacky af: lIkE ThIs MaYbE bUUT smOnethinG WiEIRd
-*/
 int main()
 {
 
-    mainMenu();
+    bool onTitleScreen = true;
 
-    std::cout << "Hello World!" std::endl;
+    while (onTitleScreen == true)
+    {
+
+        char toContinue;
+
+        std::cout << "Street game" << std::endl;
+        std::cout << "Enter 'x' to continue" << std::endl;
+        std::cin >> toContinue;
+
+        if (toContinue == 'x' || toContinue == 'X')
+        {
+            onTitleScreen = false;
+            mainMenu();
+        }
+        else
+        {
+            std::cout << "You entered something else other than 'x'." << std::endl;
+            std::cout << "Please enter 'x' to continue." << std::endl;
+            std::cout << "\033[2J\033[u"; // Clears screen, resets cursor
+        }
+        
+    }
 
     return 0;
 }

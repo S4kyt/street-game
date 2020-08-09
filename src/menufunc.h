@@ -1,4 +1,5 @@
-#pragma once
+#ifndef menufunc_h
+#define menufunc_h
 
 //Main menu 1
 void playGame();
@@ -8,3 +9,5 @@ void highScores();
 
 // 3
 void quitGame();
+
+#endif

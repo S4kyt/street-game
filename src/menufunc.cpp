@@ -4,7 +4,7 @@
 
 #include "menu.h" // mainMenu()
 #include "menufunc.h" // playGame(), highScores(), quitGame()
-#include "rand.h" // randomGen10(), randomGen100()
+#include "util.h" // randomGen10(), randomGen100(), clearScreen()
 
 using uint = unsigned int; 
 
@@ -38,12 +38,12 @@ void quitGame()
 {
     bool isQuitting = false;
 
-    std::cout << "Are you sure you would like to quit? < Y/N >" << std::endl;
-
     while (isQuitting == false)
     {
-        std::string quitInput;    
+        std::cout << "Are you sure you would like to quit? < Y/N >" << std::endl;
 
+        std::string quitInput;   
+         
         std::cin >> quitInput;
 
         if (quitInput == "y" || quitInput == "Y")
@@ -53,12 +53,13 @@ void quitGame()
         }
         else if (quitInput == "n" || quitInput == "N")
         {
+            isQuitting = true;
             mainMenu();
         }
         else
         {
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Basically fool-proofs the input when in the menu
-            std::cout << "Please enter a vaild input!" << std::endl;
+            clearScreen();
         }
     }
 }

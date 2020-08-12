@@ -28,3 +28,8 @@ uint randomGen100()
     return randomNumber100;
 }
 
+void clearScreen()
+{
+    std::cout << "\033[2J\033[u"; // Clears screen, resets cursor
+}
+

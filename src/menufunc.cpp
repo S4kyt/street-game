@@ -5,26 +5,14 @@
 #include "menu.h" // mainMenu()
 #include "menufunc.h" // playGame(), highScores(), quitGame()
 #include "util.h" // randomGen10(), randomGen100(), clearScreen()
+#include "quest.h" // introQuest()
 
 using uint = unsigned int; 
 
-// Main menu 1
-// This works well with calling random numbers whenever I need from rand.cpp and using them for whatever
-// Dont forget to assign the returned random number to an uint
+// 1
 void playGame()
 {
-    std::cout << "Playing game" << std::endl;
-
-    uint randomNumb10 = randomGen10();
-    uint randomNumb11 = randomGen10();
-    uint randomNumb12 = randomGen10();
-    uint randomNumb100 = randomGen100();
-
-    std::cout << "Random number between 1-10: " << randomNumb10 << std::endl;
-    std::cout << "Random number between 1-10: " << randomNumb11 << std::endl;
-    std::cout << "Random number between 1-10: " << randomNumb12 << std::endl;
-    std::cout << "Random number between 1-100: " << randomNumb100 << std::endl;
-
+    introQuest();
 }
 
 // 2
@@ -63,3 +51,22 @@ void quitGame()
         }
     }
 }
+
+/*
+// This works well with calling random numbers whenever I need from rand.cpp and using them for whatever
+// Dont forget to assign the returned random number to an uint
+void playGame()
+{
+    std::cout << "Playing game" << std::endl;
+
+    uint randomNumb10 = randomGen10();
+    uint randomNumb11 = randomGen10();
+    uint randomNumb12 = randomGen10();
+    uint randomNumb100 = randomGen100();
+
+    std::cout << "Random number between 1-10: " << randomNumb10 << std::endl;
+    std::cout << "Random number between 1-10: " << randomNumb11 << std::endl;
+    std::cout << "Random number between 1-10: " << randomNumb12 << std::endl;
+    std::cout << "Random number between 1-100: " << randomNumb100 << std::endl;
+}
+*/

@@ -1,9 +1,9 @@
 #include <iostream>
+#include <limits>
 
 #include "menu.h" // mainMenu()
 #include "menufunc.h" // playGame(), highScores(), quitGame()
 #include "util.h" // randomGen10(), randomGen100(), clearScreen()
-
 
 using uint = unsigned int; 
 

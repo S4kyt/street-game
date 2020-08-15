@@ -1,5 +1,5 @@
-#ifndef rand_h
-#define rand_h
+#ifndef util_h
+#define util_h
 
 using uint = unsigned int;
 

@@ -1,6 +1,8 @@
 #ifndef quest_h
 #define quest_h
 
-void introQuest();
+std::string introQuest();
+
+void testFunction();
 
 #endif

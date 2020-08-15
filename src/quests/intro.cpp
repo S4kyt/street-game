@@ -1,9 +1,11 @@
 #include <iostream>
 #include <limits> // numeric_limits, streamsize
 
-#include "util.h" // randomGen10(), randomGen100(), clearScreen()
+#include "../../src/util.h" // randomGen10(), randomGen100(), clearScreen()
 
-void introQuest()
+using uint = unsigned int;
+
+std::string introQuest()
 {
     std::string playerName;
 
@@ -11,7 +13,7 @@ void introQuest()
     std::cin >> playerName;
     clearScreen();
 
-    // Verifying that player has read everything
+    // Verifying that player has read everything and ready to continue
     std::string toContinue;
     bool continueNow = false;
 
@@ -19,6 +21,8 @@ void introQuest()
     {
         // Intro quest
         std::cout << "< Shady character >: " << playerName <<"? Looks like its up to me to welcome your ass to the streets." << std::endl;
+        //TODO: playername check, max amount of characters: 30, if it goes above 30, you need to type in a new one.
+        //TODO: maybe it cant output more than 30 or smth so i have to test that first how the output looks like with 30 characters with ur character name
         std::cout << "                     Keep your nose clean or dont thats your choice afterall." << std::endl;
         std::cout << "                     Lay low and you just might survive today." << std::endl;
         std::cout << "                     Name is Winters by the way.\n" << std::endl;
@@ -42,4 +46,5 @@ void introQuest()
             clearScreen();
         }
     }
+    return playerName;
 }

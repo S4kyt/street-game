@@ -5,14 +5,33 @@
 #include "menu.h" // mainMenu()
 #include "menufunc.h" // playGame(), highScores(), quitGame()
 #include "util.h" // randomGen10(), randomGen100(), clearScreen()
-#include "quest.h" // introQuest()
+#include "quests/quest.h" // introQuest()
 
 using uint = unsigned int; 
 
 // 1
 void playGame()
 {
-    introQuest();
+    std::string playerName = introQuest();
+
+    bool isPlaying = true;    
+
+    while (isPlaying == true)
+    {
+        // testFunction1();
+        // isPlaying = false; // this is needed because otherwise the while loop wont end after testFunction1
+
+        float playerMoney = 0.5, playerReputation = 0;
+
+        // Having this output as an active, updating stat screen is a bad idea because I need code to extend-shorten it on itself so that it wont break with longer values.
+        std::cout << "----------------------------------------" << std::endl;
+        std::cout << "| Character name: " << playerName << "                |" << std::endl;
+        std::cout << "| Money: " << playerMoney << "$                            |" << std::endl;
+        std::cout << "| Reputation: " << playerReputation << "                        |" << std::endl;
+        std::cout << "----------------------------------------" << std::endl;
+
+        isPlaying = false;
+    }
 }
 
 // 2

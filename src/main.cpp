@@ -1,5 +1,6 @@
 #include <iostream>
 #include <limits> // numeric limites, streamsize
+#include <string>
 
 #include "menu.h" // mainMenu()
 #include "menufunc.h" // playGame(), highScores(), quitGame()
@@ -17,7 +18,7 @@ int main()
         std::string toContinue;
 
         std::cout << "Street game" << std::endl;
-        std::cout << "Enter 'x' to continue" << std::endl;
+        std::cout << "< Enter 'x' to continue >" << std::endl;
         std::cin >> toContinue;
 
         if (toContinue == "x" || toContinue == "X")

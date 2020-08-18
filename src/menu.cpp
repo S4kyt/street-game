@@ -1,5 +1,6 @@
 #include <iostream>
 #include <limits> // numeric_limits, streamsize
+#include <string>
 
 #include "menu.h" // mainMenu()
 #include "menufunc.h" // playGame(), highScores(), quitGame()

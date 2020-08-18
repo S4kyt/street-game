@@ -1,5 +1,6 @@
 #include <iostream>
 #include <limits> // numeric_limits, streamsize
+#include <string>
 
 #include "../../src/util.h" // randomGen10(), randomGen100(), clearScreen()
 

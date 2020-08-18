@@ -1,43 +1,84 @@
 #include <iostream>
 #include <limits> // numeric_limits, streamsize
 #include <cstdlib> // exit
+#include <string>
 
 #include "menu.h" // mainMenu()
 #include "menufunc.h" // playGame(), highScores(), quitGame()
 #include "util.h" // randomGen10(), randomGen100(), clearScreen()
 #include "quests/quest.h" // introQuest()
+#include "../src/player/player.h" // playerOptions()
 
 using uint = unsigned int; 
 
 // 1
 void playGame()
 {
-    std::string playerName = introQuest();
+    // std::string playerName = introQuest();
+    std::string playerName = "Jason";
 
-    bool isPlaying = true;    
+    bool isPlaying = true;
 
     while (isPlaying == true)
     {
         // testFunction1();
         // isPlaying = false; // this is needed because otherwise the while loop wont end after testFunction1
 
-        float playerMoney = 0.5, playerReputation = 0;
+        float playerMoney = 0;
+        float playerReputation = 0;
+        std::string playerLocation;
+        uint dayCount = 0;
 
         // Having this output as an active, updating stat screen is a bad idea because I need code to extend-shorten it on itself so that it wont break with longer values.
+        clearScreen();
         std::cout << "----------------------------------------" << std::endl;
         std::cout << "| Character name: " << playerName << "                |" << std::endl;
-        std::cout << "| Money: " << playerMoney << "$                            |" << std::endl;
+        std::cout << "| Money: " << playerMoney << "$                          |" << std::endl;
         std::cout << "| Reputation: " << playerReputation << "                        |" << std::endl;
         std::cout << "----------------------------------------" << std::endl;
 
-        isPlaying = false;
+        std::cout << "Its Day: " << dayCount << std::endl;
+        std::cout << "\nCurrently in / on: " << playerLocation << std::endl;
+        std::cout << "You consider your options: "<< std::endl;
+        playerOptions();
+
+        uint playerAction;
+        std::cin >> playerAction;
     }
 }
 
 // 2
 void highScores()
 {
-    std::cout << "Highscores" << std::endl;
+
+    bool onHighscores = true;
+
+    // Will display the highscores each player earned, could have a detailed view on each of the players with all their stats
+    // 1-10 will be for players, 
+    while (onHighscores == true)
+    {
+        std::cout << "Highscores" << std::endl;
+        std::cout << "-----------" << std::endl;
+        std::cout << "Player 1: Lorum Johnson" << std::endl;
+        std::cout << "Player 2: Jason Ipsum" << std::endl;
+        std::cout << "Player 3: Hashtag Adams\n" << std::endl;
+
+        std::string toContinue;
+
+        std::cout << "< Enter 'x' to return to the main menu >" << std::endl;
+        std::cin >> toContinue;
+
+        if (toContinue == "x" || toContinue == "X")
+        {
+            onHighscores = false;
+            mainMenu();
+        }
+        else
+        {
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Basically fool-proofs the input when in the menu
+            clearScreen();
+        }
+    }
 }
 
 // 3
@@ -60,8 +101,8 @@ void quitGame()
         }
         else if (quitInput == "n" || quitInput == "N")
         {
-            isQuitting = true;
-            mainMenu();
+            break; // I'd really like this to work, but for some reason it doesn't do what you'd expect it to do
+                   // My debugger is faulty because of my competence, thats why Im asking questions at the moment
         }
         else
         {

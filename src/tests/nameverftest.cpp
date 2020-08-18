@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm> // count
+#include <string>
 
 #include "tests.h" // testFunction1()
 

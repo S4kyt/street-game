@@ -8,7 +8,7 @@ Project overview: Updated on 2020.10.25
 
 
 #### Reference materials used:
-  > https://www.youtube.com/user/TheChernoProject/
-  > https://www.udemy.com/course/free-learn-c-tutorial-beginners/
-  > https://en.cppreference.com/w/
-  > https://www.cplusplus.com/
+> https://www.youtube.com/user/TheChernoProject/ <br/>
+> https://www.udemy.com/course/free-learn-c-tutorial-beginners/ <br/>
+> https://en.cppreference.com/w/ <br/>
+> https://www.cplusplus.com/ <br/>

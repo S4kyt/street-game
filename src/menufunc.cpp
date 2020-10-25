@@ -71,7 +71,7 @@ void highScores()
 		if (toContinue == "x" || toContinue == "X")
 		{
 			onHighscores = false;
-			mainMenu();
+			break;
 		}
 		else
 		{
@@ -82,7 +82,7 @@ void highScores()
 }
 
 // 3
-void quitGame()
+bool quitGame()
 {
 	bool isQuitting = false;
 
@@ -96,12 +96,12 @@ void quitGame()
 
 		if (quitInput == "y" || quitInput == "Y")
 		{
-			std::cout << "Quitting game now" << std::endl;
+			std::cout << "Quitting game now..." << std::endl;
 			isQuitting = true;
 		}
 		else if (quitInput == "n" || quitInput == "N")
 		{
-			break; // I'd really like this to work, but for some reason it doesn't do what you'd expect it to do
+			return false;
 		}
 		else
 		{

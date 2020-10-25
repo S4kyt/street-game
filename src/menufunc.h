@@ -8,6 +8,6 @@ void playGame();
 void highScores();
 
 // 3
-void quitGame();
+bool quitGame();
 
 #endif

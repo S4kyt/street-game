@@ -27,20 +27,26 @@ void mainMenu()
 		if (menuChoice == "1")
 		{
 			clearScreen();
-			isInMenu = false;
 			playGame();
 		}
 		else if (menuChoice == "2")
 		{
 			clearScreen();
-			isInMenu = false;
 			highScores();
 		}
 		else if (menuChoice == "3")
 		{
 			clearScreen();
-			isInMenu = false;
-			quitGame();
+			bool willQuit = quitGame();
+
+			if (willQuit == true)
+			{
+				isInMenu = false;
+			}
+			else
+			{
+				isInMenu = true;
+			}
 		}
 		else
 		{

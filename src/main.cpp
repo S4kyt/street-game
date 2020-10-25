@@ -6,31 +6,32 @@
 #include "menufunc.h" // playGame(), highScores(), quitGame()
 #include "util.h" // randomGen10(), randomGen100(), clearScreen()
 
-using uint = unsigned int; 
+using uint = unsigned int;
 
 int main()
 {
-    bool onTitleScreen = true;
+	bool onTitleScreen = true;
 
-    //User can only continue if they enter 'x' or 'X' as input. Transits to the main menu after.
-    while (onTitleScreen == true)
-        {
-        std::string toContinue;
+	//User can only continue if they enter 'x' or 'X' as input. Transits to the main menu after.
+	while (onTitleScreen == true)
+	{
+		std::string toContinue;
 
-        std::cout << "Street game" << std::endl;
-        std::cout << "< Enter 'x' to continue >" << std::endl;
-        std::cin >> toContinue;
+		std::cout << "Street game" << std::endl;
+		std::cout << "< Enter 'x' to continue >" << std::endl;
+		uint randomNumber10 = randomGen10(); // Random number generator is finally working as intended!!! Yay!
+		std::cin >> toContinue;
 
-        if (toContinue == "x" || toContinue == "X")
-        {
-            onTitleScreen = false;
-            mainMenu();
-        }
-        else
-        {
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Basically fool-proofs the input when in the menu
-            clearScreen();
-        }
-    }
-    return 0;
+		if (toContinue == "x" || toContinue == "X")
+		{
+			onTitleScreen = false;
+			mainMenu();
+		}
+		else
+		{
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Basically fool-proofs the input when in the menu
+			clearScreen();
+		}
+	}
+	return 0;
 }

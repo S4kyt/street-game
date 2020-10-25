@@ -8,44 +8,44 @@
 
 void mainMenu()
 {
-    bool isInMenu = true;
+	bool isInMenu = true;
 
-    //As long as in the menu, and hasn't entered a correct menu option
-    while (isInMenu == true)
-    {
-        //Main menu
-        clearScreen();
-        std::cout << "Main menu" << std::endl;
-        std::cout << "< 1. Play >" << std::endl;
-        std::cout << "< 2. Highscores >" << std::endl;
-        std::cout << "< 3. Quit >" << std::endl;
+	//As long as in the menu, and hasn't entered a correct menu option
+	while (isInMenu == true)
+	{
+		//Main menu
+		clearScreen();
+		std::cout << "Main menu" << std::endl;
+		std::cout << "< 1. Play >" << std::endl;
+		std::cout << "< 2. Highscores >" << std::endl;
+		std::cout << "< 3. Quit >" << std::endl;
 
-        std::string menuChoice;
+		std::string menuChoice;
 
-        std::cin >> menuChoice;
+		std::cin >> menuChoice;
 
-        if (menuChoice == "1")
-        {
-            clearScreen();
-            isInMenu = false;
-            playGame();
-        }
-        else if (menuChoice == "2")
-        {
-            clearScreen();
-            isInMenu = false;
-            highScores();
-        }
-        else if (menuChoice == "3")
-        {
-            clearScreen();
-            isInMenu = false;
-            quitGame();
-        }
-        else
-        {
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Basically fool-proofs the input when in the menu
-            clearScreen();
-        }
-    }
+		if (menuChoice == "1")
+		{
+			clearScreen();
+			isInMenu = false;
+			playGame();
+		}
+		else if (menuChoice == "2")
+		{
+			clearScreen();
+			isInMenu = false;
+			highScores();
+		}
+		else if (menuChoice == "3")
+		{
+			clearScreen();
+			isInMenu = false;
+			quitGame();
+		}
+		else
+		{
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Basically fool-proofs the input when in the menu
+			clearScreen();
+		}
+	}
 }

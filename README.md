@@ -4,8 +4,7 @@ street-game is an RPG styled console application (as well as my hobby project im
 ### Project overview:
 Updated on 2020.10.25
 <br/>
-![alt text](https://github.com/[S4kyt]/[street-game]/blob/[dev]/projectoverview.png?raw=true)
-
+![alt text](https://github.com/S4kyt/street-game/blob/dev/projectoverview.png?raw=true)
 
 
 #### Reference materials being used:

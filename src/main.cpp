@@ -6,8 +6,6 @@
 #include "menufunc.h" // playGame(), highScores(), quitGame()
 #include "util.h" // randomGen10(), randomGen100(), clearScreen()
 
-using uint = unsigned int;
-
 int main()
 {
 	bool onTitleScreen = true;
@@ -19,7 +17,7 @@ int main()
 
 		std::cout << "Street game" << std::endl;
 		std::cout << "< Enter 'x' to continue >" << std::endl;
-		uint randomNumber10 = randomGen10(); // Random number generator is finally working as intended!!! Yay!
+		int randomNumber10 = randomGen10(); // Random number generator is finally working as intended!!! Yay!
 		std::cin >> toContinue;
 
 		if (toContinue == "x" || toContinue == "X")

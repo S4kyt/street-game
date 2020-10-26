@@ -27,13 +27,16 @@
     <ClCompile Include="src\util.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\player\options.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\quests\intro.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\tests\nameverftest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\p_options.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

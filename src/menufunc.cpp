@@ -3,13 +3,11 @@
 #include <cstdlib> // exit
 #include <string>
 
-#include "menu.h" // mainMenu()
-#include "menufunc.h" // playGame(), highScores(), quitGame()
-#include "util.h" // randomGen10(), randomGen100(), clearScreen()
-#include "quests/quest.h" // introQuest()
-#include "../src/player/player.h" // playerOptions()
-
-using uint = unsigned int;
+#include "menu.h"
+#include "menufunc.h"
+#include "util.h"
+#include "quests/quest.h"
+#include "../src/player/player.h"
 
 // 1
 void playGame()
@@ -24,25 +22,30 @@ void playGame()
 		// testFunction1();
 		// isPlaying = false; // this is needed because otherwise the while loop wont end after testFunction1
 
-		float playerMoney = 0;
-		float playerReputation = 0;
-		std::string playerLocation;
-		uint dayCount = 0;
+		//float playerMoney = 0;
+		//float playerReputation = 0;
+		//std::string playerLocation;
+		//uint dayCount = 0;
 
 		// Having this output as an active, updating stat screen is a bad idea because I need code to extend-shorten it on itself so that it wont break with longer values.
+
+		// Player initialized
+		Player player;
+		player.speak();
+
 		clearScreen();
 		std::cout << "----------------------------------------" << std::endl;
 		std::cout << "| Character name: " << playerName << "                |" << std::endl;
-		std::cout << "| Money: " << playerMoney << "$                          |" << std::endl;
-		std::cout << "| Reputation: " << playerReputation << "                        |" << std::endl;
+		std::cout << "| Money: Player money				                |" << std::endl;
+		std::cout << "| Reputation: Player reputation                    |" << std::endl;
 		std::cout << "----------------------------------------" << std::endl;
 
-		std::cout << "Its Day: " << dayCount << std::endl;
-		std::cout << "\nCurrently in / on: " << playerLocation << std::endl;
+		std::cout << "Its Day: 7" << std::endl;
+		std::cout << "\nCurrently in / on: Player Location " << std::endl;
 		std::cout << "You consider your options: " << std::endl;
 		playerOptions();
 
-		uint playerAction;
+		int playerAction;
 		std::cin >> playerAction;
 	}
 }
@@ -109,6 +112,7 @@ bool quitGame()
 			clearScreen();
 		}
 	}
+	return true;
 }
 
 /*

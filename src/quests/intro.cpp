@@ -4,8 +4,6 @@
 
 #include "../../src/util.h" // randomGen10(), randomGen100(), clearScreen()
 
-using uint = unsigned int;
-
 std::string introQuest()
 {
 	std::string playerName;

@@ -98,10 +98,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="player.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\menu.cpp" />
     <ClCompile Include="src\menufunc.cpp" />
-    <ClCompile Include="src\player\options.cpp" />
+    <ClCompile Include="src\player\p_options.cpp" />
     <ClCompile Include="src\quests\intro.cpp" />
     <ClCompile Include="src\tests\nameverftest.cpp" />
     <ClCompile Include="src\util.cpp" />

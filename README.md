@@ -11,4 +11,3 @@ Updated on 2020.10.25
 > https://www.youtube.com/user/TheChernoProject/ <br/>
 > https://www.udemy.com/course/free-learn-c-tutorial-beginners/ <br/>
 > https://en.cppreference.com/w/ <br/>
-> https://www.cplusplus.com/ <br/>
